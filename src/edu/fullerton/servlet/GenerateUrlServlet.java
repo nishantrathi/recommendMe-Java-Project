@@ -34,7 +34,7 @@ public class GenerateUrlServlet extends HttpServlet {
 			long userId = (Long)request.getSession().getAttribute("uId");
 			GenerateUrl objGenerateUrl = new GenerateUrl();
 			String urlJson = objGenerateUrl.generateUrl(userId).toString();
-			System.out.println("url==>"+urlJson);
+			System.out.println("url created==>"+urlJson);
 			response.setContentType("application/text");
 			response.setCharacterEncoding("UTF-8");
 			response.getWriter().write(urlJson);
